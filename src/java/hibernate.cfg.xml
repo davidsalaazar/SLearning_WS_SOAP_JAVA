@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/pro_s_learning</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+   
+        <property name="hibernate.connection.username">davidsalazar</property>
+        <property name="hibernate.connection.password">12345</property>
+    
+        <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
+        	
+        <!-- Mapping Property Declaration -->        
+        <mapping class="com.utng.modelo.RolModelo"/>
+        <mapping class="com.utng.modelo.PersonaModelo"/>
+        <mapping class="com.utng.modelo.UsuarioModelo"/>
+        <mapping class="com.utng.modelo.NivelModelo"/>
+        <mapping class="com.utng.modelo.BitacoraNivelModelo"/>
+        <mapping class="com.utng.modelo.AmbienteModelo"/>
+        <mapping class="com.utng.modelo.SesionModelo"/>
+        <mapping class="com.utng.modelo.CursoModelo"/>
+        <mapping class="com.utng.modelo.TemaModelo"/>
+        <mapping class="com.utng.modelo.ActividadModelo"/>
+        <mapping class="com.utng.modelo.ArchivoModelo"/>
+        <mapping class="com.utng.modelo.ParametroModelo"/>
+        <mapping class="com.utng.modelo.PreguntaModelo"/>
+    </session-factory>
+</hibernate-configuration>
